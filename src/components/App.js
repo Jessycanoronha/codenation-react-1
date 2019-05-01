@@ -44,10 +44,12 @@ class App extends Component {
   };
 
   render() {
+    const searchString = this.getSearchString()
+    const recipe = this.getRecipe()
     return (
       <div className="App">
         <Navbar
-          searchString={this.getSearchString}
+          searchString={searchString}
           handleUrlSearchString={this.handleUrlSearchString}
         />
         <div className="container mt-10">
@@ -64,7 +66,7 @@ class App extends Component {
           <Route
             exact
             path="/recipe/:searchString"
-            render={props => <RecipePage {...props} recipe={this.getRecipe} />}
+            render={props => <RecipePage {...props} recipe={recipe} />}
           />
         </div>
       </div>

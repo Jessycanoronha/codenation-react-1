@@ -6,7 +6,7 @@ const Home = (
   props,
   {
     recipes = props.recipes,
-    searchString = props.match ? props.match.params.searchString : ""
+    searchString = props.match.params.searchString || ""
   }
 ) => {
   

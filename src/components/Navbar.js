@@ -10,7 +10,7 @@ const Navbar = ({searchString, handleUrlSearchString }) => (
 
     <div className="form-group justify-content-center row col-10 my-2">
       <input
-        value={searchString()}
+        value={searchString}
         onChange={handleUrlSearchString}
         className="form-control col-9 mr-2"
         type="search"
